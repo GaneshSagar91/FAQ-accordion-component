@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ accordion</title>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  min-height: 100vh;
+  background: url('./assets/images/background-pattern-desktop.svg') no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.faq-wrapper{
+  background-color: white;
+  width: 500px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+main.faq-wrapper .heading{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 40px;
+  color: hsl(292, 42%, 14%);
+} 
+.heading img{
+  width: 30px;
+}
+.q-a-wrapper{
+  margin-top: 25px;
+}
+.q-a-wrapper div h3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  cursor: pointer;
+}
+.q-a-wrapper div h3:hover{
+  color: hsl(292, 32%, 50%);
+}
+.q-a-wrapper div h3 img{
+  width: 25px;
+}
+hr{
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.answer{
+  height: 0px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 481px) {
+  body{
+    padding: 20px 0;
+    background: url('./assets/images/background-pattern-mobile.svg') no-repeat;
+  }
+  main.faq-wrapper{
+    width: 90%;
+  }
+}
+  </style>
+  <script src="./index.js" defer></script>
+</head>
+<body>
+
+  <main class="faq-wrapper">
+
+    <h1 class="heading"><img src="./assets/images/icon-star.svg" alt="star icon"> FAQs</h1>
+
+    <section class="q-a-wrapper">
+      <div>
+        <h3 class="question">What is Frontend Mentor, and how will it help me? <img src="./assets/images/icon-plus.svg" alt="icon" class="icon"></h3>
+        <p class="answer">
+        Frontend Mentor offers realistic coding challenges to help developers improve their 
+        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+        all levels and ideal for portfolio building.
+        </p>
+      </div><hr>
+
+      <div>
+        <h3 class="question">Is Frontend Mentor free? <img src="./assets/images/icon-plus.svg" alt="icon" class="icon"></h3>
+        <p class="answer">
+        Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+        option providing access to a range of projects suitable for all skill levels.
+        </p>
+      </div><hr>
+
+      <div>
+        <h3 class="question"> Can I use Frontend Mentor projects in my portfolio? <img src="./assets/images/icon-plus.svg" alt="icon" class="icon"></h3>
+        <p class="answer">
+          Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+          way to showcase your skills to potential employers!
+        </p>
+      </div><hr>
+
+      <div>
+        <h3 class="question">How can I get help if I'm stuck on a challenge? <img src="./assets/images/icon-plus.svg" alt="icon" class="icon"></h3>
+        <p class="answer">
+          The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+          channel where you can ask questions and seek support from other community members.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

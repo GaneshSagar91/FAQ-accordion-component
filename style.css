@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  min-height: 100vh;
+  background: url('./assets/images/background-pattern-desktop.svg') no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.faq-wrapper{
+  background-color: white;
+  width: 500px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+main.faq-wrapper .heading{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 40px;
+  color: hsl(292, 42%, 14%);
+} 
+.heading img{
+  width: 30px;
+}
+.q-a-wrapper{
+  margin-top: 25px;
+}
+.q-a-wrapper div h3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: hsl(292, 42%, 14%);
+  font-weight: 600;
+  cursor: pointer;
+}
+.q-a-wrapper div h3:hover{
+  color: hsl(292, 32%, 50%);
+}
+.q-a-wrapper div h3 img{
+  width: 25px;
+}
+hr{
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.answer{
+  height: 0px;
+  line-height: 1.5;
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 481px) {
+  body{
+    padding: 20px 0;
+    background: url('./assets/images/background-pattern-mobile.svg') no-repeat;
+  }
+  main.faq-wrapper{
+    width: 90%;
+  }
+}
